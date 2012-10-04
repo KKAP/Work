@@ -1,12 +1,12 @@
 
-
 import java.util.Scanner;
 
 public class main {
-	static  Scanner sc = new Scanner(System.in);
+	static Scanner sc = new Scanner(System.in);
+
 	public static void main(String[] args) {
-		int count=0;
-		GUIvote guiVote ;
+		int count = 0;
+		GUIvote guiVote;
 		Showresult showResult = new Showresult();
 		Observer observer;
 		Student student;
@@ -22,42 +22,35 @@ public class main {
 		Projectdescription a5 = new Projectdescription("5", "5");
 		Projectdescription a6 = new Projectdescription("6", "6");
 
-		while(true){
+		while (true) {
 			guiVote = new GUIvote();
 			guiVote.setShow(true);
 			String in = sc.nextLine();
 			{
-				if(Character.toString(in.charAt(0)).equals("1")){
+				if (Character.toString(in.charAt(0)).equals("1")) {
 					observer = new Observer();
-					ballot=new Ballot(observer, a1, categories);
-					guiVote.guiVote(ballot, ballotbox) ;
-				}
-				else if(Character.toString(in.charAt(0)).equals("2")){
+					ballot = new Ballot(observer, a1, categories);
+					guiVote.guiVote(ballot, ballotbox);
+				} else if (Character.toString(in.charAt(0)).equals("2")) {
 					student = new Student("peach");
-					ballot=new Ballot(student, a2, categories);
-				
-					guiVote.guiVote(ballot, ballotbox) ;
-				}
-				else if(Character.toString(in.charAt(0)).equals("5")){
+					ballot = new Ballot(student, a2, categories);
+
+					guiVote.guiVote(ballot, ballotbox);
+				} else if (Character.toString(in.charAt(0)).equals("5")) {
 					commitee = new Commitee();
 					professor = new Professor();
-					ballot=new Ballot(commitee, a4, categories);
-					guiVote.guiVote(ballot, ballotbox) ;
+					ballot = new Ballot(commitee, a4, categories);
+					guiVote.guiVote(ballot, ballotbox);
 				}
-				
+
 			}
 			guiVote.setShow(false);
 			count++;
-			if(count==5)
+			if (count == 5)
 				break;
-			
-
-
 
 		}
 		showResult.show(ballotbox);
-
-
 
 	}
 }

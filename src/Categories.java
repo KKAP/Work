@@ -6,12 +6,10 @@ public class Categories {
 	private String categories;
 
 	public Categories(String categories) {
-		this.categories=categories;
+		this.categories = categories;
 	}
 
-
-
-	public String getCategories(){
+	public String getCategories() {
 		return categories;
 	}
 

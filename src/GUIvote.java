@@ -1,18 +1,17 @@
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.*;
+
 /*
  * This is the UI of the vote part. It will display what user can vote and submitting their votes.
  */
 
-public class GUIvote
-{
+public class GUIvote {
 	public JFrame f;
 	private boolean check;
-	
+
 	public void guiVote(final Ballot ballot, final Ballotbox ballotbox) {
 
 		Font fn0 = new Font("Courier New", Font.BOLD, 20);
@@ -20,13 +19,13 @@ public class GUIvote
 		Font fn = new Font("Courier New", Font.BOLD, 16);
 		Font fn1 = new Font("Cordia New", Font.BOLD, 26);
 
-		f = new JFrame("VOTE"); 
+		f = new JFrame("VOTE");
 		JPanel p = new JPanel();
-		p.setBackground(Color.WHITE); 
+		p.setBackground(Color.WHITE);
 
 		JLabel w1 = new JLabel(" ====================== ",
 				SwingConstants.CENTER);
-		JLabel l1 = new JLabel(" Vote ", SwingConstants.CENTER); // µÑÇË¹Ñ§Ê×ÍÂÔ¹´ÕµéÍ¹ÃÑº
+		JLabel l1 = new JLabel(" Vote ", SwingConstants.CENTER);
 
 		JLabel w2 = new JLabel(" ====================== ",
 				SwingConstants.CENTER);
@@ -37,11 +36,11 @@ public class GUIvote
 		w2.setFont(fn0);
 
 		w1.setPreferredSize(new Dimension(1000, 25));
-		l1.setPreferredSize(new Dimension(1000, 25)); // ÃÐÂÐËèÒ§¢Í§ºÃÃ·Ñ´
+		l1.setPreferredSize(new Dimension(1000, 25));
 
 		w2.setPreferredSize(new Dimension(1000, 25));
 		w1.setForeground(Color.red);
-		l1.setForeground(Color.blue); // ÊÕµÑÇË¹Ñ§Ê×Í
+		l1.setForeground(Color.blue);
 
 		w2.setForeground(Color.red);
 
@@ -54,7 +53,7 @@ public class GUIvote
 		in.setPreferredSize(new Dimension(300, 50));
 		in.setForeground(new Color(47, 207, 189));
 		p.add(in);
-		/////////////////
+
 		JLabel q = new JLabel(ballot.getProjectdescription().getNameProject());
 		q.setBackground(Color.WHITE);
 		q.setPreferredSize(new Dimension(150, 10));
@@ -62,8 +61,6 @@ public class GUIvote
 		p.add(q);
 		f.add(p);
 
-
-		////////////////////
 		JButton l2 = new JButton("Submit");
 		l2.setBackground(Color.WHITE);
 		l2.setFont(fn1);
@@ -86,11 +83,10 @@ public class GUIvote
 			}
 		});
 
-
-	}
-	public void setShow(boolean check){
-		this.check=check;
 	}
 
+	public void setShow(boolean check) {
+		this.check = check;
+	}
 
 }
