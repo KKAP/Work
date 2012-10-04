@@ -13,8 +13,6 @@ public class Showresult {
 		Iterator iter = (Iterator)set.iterator();
 		while (iter.hasNext()) {
 			String key = (String)iter.next();
-//			System.out.print(key+ " ");
-//			System.out.println(ballotBox.getBallotBox().get(key));
 			int a=(Integer) ballotBox.getBallotBox().get(key);
 			guiShow.guiResult(key+"",a+"");
 			guiShow.setShow(true);

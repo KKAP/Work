@@ -55,7 +55,7 @@ public class GUIvote
 		in.setForeground(new Color(47, 207, 189));
 		p.add(in);
 		/////////////////
-		JLabel q = new JLabel(ballot.getProjectdescrition().getNameProject());
+		JLabel q = new JLabel(ballot.getProjectdescription().getNameProject());
 		q.setBackground(Color.WHITE);
 		q.setPreferredSize(new Dimension(150, 10));
 		q.setOpaque(true);

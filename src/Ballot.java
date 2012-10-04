@@ -7,10 +7,10 @@
 
 public class Ballot {
 	private int remaining ;
-	private Projectdescrition projectdescrition;
+	private Projectdescription projectdescription;
 	private Categories categories;
 	
-	public Ballot(Voter voter,Projectdescrition project,Categories categories) {
+	public Ballot(Voter voter,Projectdescription project,Categories categories) {
 
 		if(voter instanceof Student)
 			remaining= 2;
@@ -18,12 +18,12 @@ public class Ballot {
 			remaining= 1;
 		else
 			remaining=5;
-		projectdescrition=project;
+		projectdescription=project;
 		this.categories=categories;
 	}
 	public void vote(Ballotbox ballotbox) {
 		if(remaining>0){
-			ballotbox.addBallot(projectdescrition.getNameProject());
+			ballotbox.addBallot(projectdescription.getNameProject());
 			remaining--;
 		}
 		else if(remaining == 0)
@@ -37,8 +37,8 @@ public class Ballot {
 	public int getRemaining() {
 		return remaining;
 	}
-	public Projectdescrition getProjectdescrition(){
-		return projectdescrition;
+	public Projectdescription getProjectdescription(){
+		return projectdescription;
 	}
 
 

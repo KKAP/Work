@@ -15,12 +15,12 @@ public class main {
 		Ballot ballot;
 		Ballotbox ballotbox = new Ballotbox();
 		Categories categories = new Categories("dddd");
-		Projectdescrition a1 = new Projectdescrition("1", "1");
-		Projectdescrition a2 = new Projectdescrition("2", "2");
-		Projectdescrition a3 = new Projectdescrition("3", "3");
-		Projectdescrition a4 = new Projectdescrition("4", "4");
-		Projectdescrition a5 = new Projectdescrition("5", "5");
-		Projectdescrition a6 = new Projectdescrition("6", "6");
+		Projectdescription a1 = new Projectdescription("1", "1");
+		Projectdescription a2 = new Projectdescription("2", "2");
+		Projectdescription a3 = new Projectdescription("3", "3");
+		Projectdescription a4 = new Projectdescription("4", "4");
+		Projectdescription a5 = new Projectdescription("5", "5");
+		Projectdescription a6 = new Projectdescription("6", "6");
 
 		while(true){
 			guiVote = new GUIvote();
