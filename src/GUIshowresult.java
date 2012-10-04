@@ -1,5 +1,5 @@
 /*
- * This is the UI part where user will get after voting. Which is the result
+ * This is the UI part where user will get after voting. Which is the result                
  */
 
 import java.awt.*;
