@@ -1,4 +1,6 @@
-
+/*
+ * This class will create a projectdescition object and each one of them will store the project.
+ */
 
 import java.awt.List;
 import java.util.ArrayList;

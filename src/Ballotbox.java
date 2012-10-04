@@ -1,6 +1,9 @@
 
 import java.util.HashMap;
 import java.util.Map;
+/**
+ * This class keeps all the ballot of the votes
+ */
 
 public class Ballotbox  {	
 	private Map< String, Integer> map = new HashMap<String, Integer>(); 

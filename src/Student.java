@@ -1,4 +1,5 @@
-
+/*This class will identify the user that if they're student or not.
+ */
 
 
 public class Student implements Voter {

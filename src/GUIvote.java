@@ -4,6 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.*;
+/*
+ * This is the UI of the vote part. It will display what user can vote and submitting their votes.
+ */
 
 public class GUIvote
 {

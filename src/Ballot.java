@@ -1,4 +1,8 @@
-
+/**
+ * This class authenicate the user so that each kind of user would have different votes
+ * And this class will calculate the votes that the user still can vote
+ *
+ */
 
 
 public class Ballot {

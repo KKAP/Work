@@ -1,7 +1,9 @@
 
 import java.util.Iterator;
 import java.util.Set;
-
+/*
+ * This class get all the votes and calculate the result
+ */
 
 public class Showresult {
 
