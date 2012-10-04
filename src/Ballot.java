@@ -1,4 +1,4 @@
-package ExceedVoter;
+
 
 
 public class Ballot {

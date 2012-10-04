@@ -1,4 +1,4 @@
-package ExceedVoter;
+
 
 import java.util.Scanner;
 
