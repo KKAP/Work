@@ -9,8 +9,9 @@ public class Ballot {
 	private int remaining;
 	private Projectdescription projectdescription;
 	private Categories categories;
+	private Ballotbox ballotBox;
 
-	public Ballot(Voter voter, Projectdescription project, Categories categories) {
+	public Ballot(Voter voter, Projectdescription project, Categories categories,Ballotbox ballotbox) {
 
 		if (voter instanceof Student)
 			remaining = 2;
@@ -20,11 +21,12 @@ public class Ballot {
 			remaining = 5;
 		projectdescription = project;
 		this.categories = categories;
+		this.ballotBox=ballotbox;
 	}
 
-	public void vote(Ballotbox ballotbox) {
+	public void vote() {
 		if (remaining > 0) {
-			ballotbox.addBallot(projectdescription.getNameProject());
+			ballotBox.addBallot(projectdescription.getNameProject());
 			remaining--;
 		} else if (remaining == 0) {
 			System.out.println("You don't have any votes left!!!");
@@ -36,6 +38,9 @@ public class Ballot {
 
 	public int getRemaining() {
 		return remaining;
+	}
+	public Categories getCategories(){
+		return categories;
 	}
 
 	public Projectdescription getProjectdescription() {
