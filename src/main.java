@@ -29,18 +29,18 @@ public class main {
 			{
 				if (Character.toString(in.charAt(0)).equals("1")) {
 					observer = new Observer();
-					ballot = new Ballot(observer, a1, categories);
-					guiVote.guiVote(ballot, ballotbox);
+					ballot = new Ballot(observer, a1, categories,ballotbox);
+					guiVote.guiVote(ballot);
 				} else if (Character.toString(in.charAt(0)).equals("2")) {
 					student = new Student("peach");
-					ballot = new Ballot(student, a2, categories);
+					ballot = new Ballot(student, a2, categories,ballotbox);
 
-					guiVote.guiVote(ballot, ballotbox);
+					guiVote.guiVote(ballot);
 				} else if (Character.toString(in.charAt(0)).equals("5")) {
 					commitee = new Commitee();
 					professor = new Professor();
-					ballot = new Ballot(commitee, a4, categories);
-					guiVote.guiVote(ballot, ballotbox);
+					ballot = new Ballot(commitee, a4, categories,ballotbox);
+					guiVote.guiVote(ballot);
 				}
 
 			}
