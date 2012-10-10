@@ -85,8 +85,8 @@
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>651.0</double> 
-     <double>490.0</double> 
+     <double>982.0</double> 
+     <double>410.0</double> 
     </void> 
    </object> 
   </void> 
@@ -195,8 +195,8 @@ Student
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>425.0</double> 
-     <double>564.0</double> 
+     <double>438.0</double> 
+     <double>524.0</double> 
     </void> 
    </object> 
   </void> 
@@ -247,9 +247,15 @@ Voter
   </void> 
   <void method="addNode"> 
    <object id="ClassNode9" class="com.horstmann.violet.ClassNode"> 
+    <void property="attributes"> 
+     <void property="text"> 
+      <string>frame : JFrame</string> 
+     </void> 
+    </void> 
     <void property="methods"> 
      <void property="text"> 
-      <string>show( i : int, name : String , ballotbox : Ballotbox)</string> 
+      <string>+show( controlresult : Controlresult ) : void
++setvisible(guiresult : Guiresult) : void</string> 
      </void> 
     </void> 
     <void property="name"> 
@@ -260,21 +266,22 @@ Voter
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>672.0</double> 
-     <double>400.0</double> 
+     <double>678.0</double> 
+     <double>600.0</double> 
     </void> 
    </object> 
   </void> 
   <void method="addNode"> 
-   <object class="com.horstmann.violet.ClassNode"> 
+   <object id="ClassNode10" class="com.horstmann.violet.ClassNode"> 
     <void property="attributes"> 
      <void property="text"> 
-      <string>- guiresult : Guiresult</string> 
+      <string>- ballotbox : Bollotbox</string> 
      </void> 
     </void> 
     <void property="methods"> 
      <void property="text"> 
-      <string>+du ( ballotbox : Ballotbox )</string> 
+      <string>+Controlresult( ballotbox : Ballotbox )
++show()</string> 
      </void> 
     </void> 
     <void property="name"> 
@@ -286,8 +293,8 @@ Voter
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>803.0</double> 
-     <double>498.0</double> 
+     <double>53.0</double> 
+     <double>583.0</double> 
     </void> 
    </object> 
   </void> 
@@ -414,6 +421,54 @@ Voter
   <void method="connect"> 
    <object class="com.horstmann.violet.NoteEdge"/> 
    <object idref="ClassNode9"/> 
+   <object idref="ClassNode9"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/> 
+    </void> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode9"/> 
+   <object idref="ClassNode10"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/> 
+    </void> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode10"/> 
+   <object idref="ClassNode8"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/> 
+    </void> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode8"/> 
+   <object idref="ClassNode10"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/> 
+    </void> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode10"/> 
    <object idref="ClassNode9"/> 
   </void> 
  </object> 
