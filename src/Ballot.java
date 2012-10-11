@@ -21,15 +21,7 @@ public class Ballot {
 	public void vote() {
 		ballotBox.add(projectdescription.getName());
 	}
-//<<<<<<< HEAD
-//
-//
-//=======
-////	public int getRemaining() {
-////		return remaining;
-////	}
-//>>>>>>> ...
-	
+
 	public Categories getCategories(){
 		return categories;
 	}
