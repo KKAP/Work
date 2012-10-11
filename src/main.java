@@ -5,7 +5,7 @@ public class main {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		
+
 		int count = 0;
 		GUIvote guiVote = new GUIvote();
 		Observer observer;
@@ -29,18 +29,27 @@ public class main {
 			{
 				if (Character.toString(in.charAt(0)).equals("1")) {
 					observer = new Observer();
+				//	while(observer.getRemainning()>=0)
+					{
 					ballot = new Ballot(observer, a1, categories,ballotbox);
 					guiVote.guiVote(ballot);
+					}
+					
 				} else if (Character.toString(in.charAt(0)).equals("2")) {
 					student = new Student("peach");
+					while(student.getRemainning()>=0){
 					ballot = new Ballot(student, a2, categories,ballotbox);
 					guiVote.guiVote(ballot);
+					}
 				} else if (Character.toString(in.charAt(0)).equals("5")) {
 					commitee = new Commitee();
 					professor = new Professor();
+					while(commitee.getRemainning()>=0){
 					ballot = new Ballot(commitee, a4, categories,ballotbox);
 					guiVote.guiVote(ballot);
+					}
 				}
+
 
 			}
 			guiVote.setShow(false);
@@ -52,4 +61,5 @@ public class main {
 		controlResult.show();
 
 	}
+
 }

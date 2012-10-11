@@ -72,7 +72,7 @@ public class GUIvote {
 		f.add(p);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f.setSize(800, 600);
-		f.setVisible(check);
+		f.setVisible(true);
 		f.setLayout(null);
 		f.setResizable(false);
 

@@ -3,6 +3,8 @@
  */
 
 public class Observer implements Voter {
-	// private int remaining=1;
+	private int remaining=1;
+	public int getRemainning(){ return remaining;}
+	public void subtraceRemainning(){ remaining--;}
 
 }

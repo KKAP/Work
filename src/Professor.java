@@ -3,5 +3,7 @@
  */
 
 public class Professor implements Voter {
-
+	private int remaining=5;
+	public int getRemainning(){ return remaining;}
+	public void subtraceRemainning(){ remaining--;}
 }
