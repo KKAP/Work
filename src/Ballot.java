@@ -22,11 +22,7 @@ public class Ballot {
 		ballotBox.addBallot(projectdescription.getNameProject());
 	}
 
-	
 
-//	public int getRemaining() {
-//		return remaining;
-//	}
 	
 	public Categories getCategories(){
 		return categories;
