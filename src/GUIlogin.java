@@ -1,4 +1,4 @@
-package ExceedVoter;
+
 import javax.swing.*;
 import javax.swing.event.*;
 import java.awt.*;
@@ -15,6 +15,10 @@ public class GUIlogin {
 		private JPanel pnlCenter = new JPanel();
 		private JPanel pnlSouth = new JPanel();
 		
+		
+	/**
+	 * A constucter for a GUI stuffs.
+	 */
 		public GUIlogin(){
 			
 			//pnlCenter.add(head);
@@ -31,6 +35,10 @@ public class GUIlogin {
 			frame.setVisible(true);  
 			
 		}
+		/**
+		 * 
+		 * main class for test a GUI.
+		 */
 		public static void main (String [] args) {
 				GUIlogin gui = new GUIlogin();
 				
