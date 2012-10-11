@@ -11,16 +11,27 @@ public class Ballot {
 	private Categories categories;
 	private BallotBox ballotBox;
 
-	public Ballot(Voter voter, Project project, Categories categories,BallotBox ballotbox) {
+	/**
+	 * 
+	 * @param voter which voter.
+	 * @param project project description.
+	 * @param categories what kind of categories.
+	 * @param ballotbox ballotbox.
+	 * this is a constructor class.
+	 */
+	public Ballot(Voter voter, Project project, Categories categories,BallotBox ballotbox ){
 		this.voter=voter;
 		projectdescription = project;
 		this.categories = categories;
 		this.ballotBox=ballotbox;
 	}
-
+	/**
+	 * this method use to vote.
+	 */
 	public void vote() {
-		ballotBox.add(projectdescription.getName());
+		ballotBox.addBallot(projectdescription.getName());
 	}
+
 
 	public Categories getCategories(){
 		return categories;

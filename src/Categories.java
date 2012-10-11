@@ -4,11 +4,17 @@
 
 public class Categories {
 	private String categories;
-
+/**
+ * this is a contructor of Categories class.
+ * @param categories
+ */
 	public Categories(String categories) {
 		this.categories = categories;
 	}
-
+/**
+ * 
+ * @return a categories.
+ */
 	public String getCategories() {
 		return categories;
 	}
