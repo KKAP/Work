@@ -1,13 +1,13 @@
 
-/*import java.util.Scanner;
+import java.util.Scanner;
 
 public class main {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		
 		int count = 0;
-		GUIvote guiVote;
-		Showresult showResult = new Showresult();
+		GUIvote guiVote = new GUIvote();
 		Observer observer;
 		Student student;
 		Commitee commitee;
@@ -21,7 +21,7 @@ public class main {
 		Projectdescription a4 = new Projectdescription("4", "4");
 		Projectdescription a5 = new Projectdescription("5", "5");
 		Projectdescription a6 = new Projectdescription("6", "6");
-
+		Controlresult controlResult = new  Controlresult(ballotbox);
 		while (true) {
 			guiVote = new GUIvote();
 			guiVote.setShow(true);
@@ -34,7 +34,6 @@ public class main {
 				} else if (Character.toString(in.charAt(0)).equals("2")) {
 					student = new Student("peach");
 					ballot = new Ballot(student, a2, categories,ballotbox);
-
 					guiVote.guiVote(ballot);
 				} else if (Character.toString(in.charAt(0)).equals("5")) {
 					commitee = new Commitee();
@@ -50,7 +49,7 @@ public class main {
 				break;
 
 		}
-		showResult.show(ballotbox);
+		controlResult.show();
 
 	}
-}*/
+}
