@@ -8,12 +8,11 @@ public class Guiresult {
 	public JPanel panel;
 
 	public Guiresult() {
-
 		frame = new JFrame("Result");
 		panel = new JPanel();
-
-		panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
-		frame.add(panel);
+        frame.setLayout(new BorderLayout());
+		panel.setLayout(new GridLayout(1,3));
+		frame.add(panel,BorderLayout.CENTER);
 		frame.setSize(800, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -52,4 +51,6 @@ public class Guiresult {
 		frame.setVisible(i);
 
 	}
-	}
+
+	
+}
