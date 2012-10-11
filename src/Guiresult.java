@@ -10,7 +10,7 @@ public class Guiresult {
 	public Guiresult() {
 		frame = new JFrame("Result");
 		panel = new JPanel();
-        frame.setLayout(new BorderLayout());
+		frame.setLayout(new BorderLayout());
 		panel.setLayout(new GridLayout(1,3));
 		frame.add(panel,BorderLayout.CENTER);
 		frame.setSize(800, 600);
@@ -32,25 +32,25 @@ public class Guiresult {
 		panel_num.add(label_headnum);
 		panel_name.add(label_headname);
 		panel_score.add(label_headscore);
-		for (int c = 0; c < i; c++) {
+		//for (int c = 0; c < i; c++) {
 
-			JLabel label_num = new JLabel(c+1+"");
-			JLabel label_name = new JLabel(name);
-			JLabel label_score = new JLabel(score+"");
-			panel_num.add(label_num);
-			panel_name.add(label_name);
-			panel_score.add(label_score);
-			panel.add(panel_num);
-			panel.add(panel_name);
-			panel.add(panel_score);
-		}
-
+		JLabel label_num = new JLabel(i+"");
+		JLabel label_name = new JLabel(name);
+		JLabel label_score = new JLabel(score+"");
+		panel_num.add(label_num);
+		panel_name.add(label_name);
+		panel_score.add(label_score);
+		panel.add(panel_num);
+		panel.add(panel_name);
+		panel.add(panel_score);
 	}
+
+	//}
 
 	public void setvisible(boolean i) {
 		frame.setVisible(i);
 
 	}
 
-	
+
 }
