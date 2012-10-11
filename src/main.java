@@ -13,14 +13,14 @@ public class main {
 		Commitee commitee;
 		Professor professor;
 		Ballot ballot;
-		Ballotbox ballotbox = new Ballotbox();
+		BallotBox ballotbox = new BallotBox();
 		Categories categories = new Categories("dddd");
-		Projectdescription a1 = new Projectdescription("1", "1");
-		Projectdescription a2 = new Projectdescription("2", "2");
-		Projectdescription a3 = new Projectdescription("3", "3");
-		Projectdescription a4 = new Projectdescription("4", "4");
-		Projectdescription a5 = new Projectdescription("5", "5");
-		Projectdescription a6 = new Projectdescription("6", "6");
+		Project a1 = new Project("1", "1");
+		Project a2 = new Project("2", "2");
+		Project a3 = new Project("3", "3");
+		Project a4 = new Project("4", "4");
+		Project a5 = new Project("5", "5");
+		Project a6 = new Project("6", "6");
 		Controlresult controlResult = new  Controlresult(ballotbox);
 		while (true) {
 			if (count == 5)

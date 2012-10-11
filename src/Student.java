@@ -13,21 +13,30 @@ public class Student implements Voter {
 	public Student(String name) {
 		this.name = name;
 	}
+<<<<<<< HEAD
 	/**
 	 * return remaining.
 	 */
+=======
+
+>>>>>>> ...
 	public int getRemainning(){ return remaining;}
 	/**
 	 * remaining minus one.
 	 */
 	public void subtraceRemainning(){ remaining--;}
+<<<<<<< HEAD
 	
 	/**
 	 * 
 	 * @return a name of the student.
 	 */
+=======
+
+>>>>>>> ...
 	public String getName() {
 		return name;
 	}
+
 
 }

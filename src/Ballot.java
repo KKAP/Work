@@ -7,11 +7,11 @@
 
 public class Ballot {
 	private Voter voter;
-	private Projectdescription projectdescription;
+	private Project projectdescription;
 	private Categories categories;
-	private Ballotbox ballotBox;
+	private BallotBox ballotBox;
 
-	public Ballot(Voter voter, Projectdescription project, Categories categories,Ballotbox ballotbox) {
+	public Ballot(Voter voter, Project project, Categories categories,BallotBox ballotbox) {
 		this.voter=voter;
 		projectdescription = project;
 		this.categories = categories;
@@ -19,16 +19,22 @@ public class Ballot {
 	}
 
 	public void vote() {
-		ballotBox.addBallot(projectdescription.getNameProject());
+		ballotBox.add(projectdescription.getName());
 	}
+<<<<<<< HEAD
 
 
+=======
+//	public int getRemaining() {
+//		return remaining;
+//	}
+>>>>>>> ...
 	
 	public Categories getCategories(){
 		return categories;
 	}
 
-	public Projectdescription getProjectdescription() {
+	public Project getProjectdescription() {
 		return projectdescription;
 	}
 

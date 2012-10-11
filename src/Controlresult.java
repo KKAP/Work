@@ -2,11 +2,11 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class Controlresult {
-	private Ballotbox ballotbox;
+	private BallotBox ballotbox;
 	private int i=0;
 	private Guiresult guiresult;
 	
-	Controlresult(Ballotbox ballotbox) {
+	Controlresult(BallotBox ballotbox) {
 		this.ballotbox = ballotbox;
 		guiresult = new Guiresult();
 
