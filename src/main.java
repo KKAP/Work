@@ -23,6 +23,8 @@ public class main {
 		Projectdescription a6 = new Projectdescription("6", "6");
 		Controlresult controlResult = new  Controlresult(ballotbox);
 		while (true) {
+			if (count == 5)
+				break;
 			guiVote = new GUIvote();
 			guiVote.setShow(true);
 			String in = sc.nextLine();
@@ -37,14 +39,16 @@ public class main {
 					
 				} else if (Character.toString(in.charAt(0)).equals("2")) {
 					student = new Student("peach");
-					while(student.getRemainning()>=0){
+					//while(student.getRemainning()>=0)
+					{
 					ballot = new Ballot(student, a2, categories,ballotbox);
 					guiVote.guiVote(ballot);
 					}
 				} else if (Character.toString(in.charAt(0)).equals("5")) {
 					commitee = new Commitee();
 					professor = new Professor();
-					while(commitee.getRemainning()>=0){
+					//while(commitee.getRemainning()>=0)
+					{
 					ballot = new Ballot(commitee, a4, categories,ballotbox);
 					guiVote.guiVote(ballot);
 					}
@@ -53,9 +57,9 @@ public class main {
 
 			}
 			guiVote.setShow(false);
+			
+			
 			count++;
-			if (count == 5)
-				break;
 
 		}
 		controlResult.show();
