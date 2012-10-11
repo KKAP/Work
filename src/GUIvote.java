@@ -48,11 +48,19 @@ public class GUIvote {
 		p.add(l1);
 
 		p.add(w2);
-		JLabel in = new JLabel("Candidate", SwingConstants.CENTER);
+		
+		JLabel descriptions = new JLabel("FOR DESCRIPTION",SwingConstants.NORTH_EAST);
+		descriptions.setFont(fn0);
+		descriptions.setPreferredSize(new Dimension(500, 100));
+		descriptions.setForeground(new Color(47, 207, 189));
+		p.add(descriptions);
+		
+		JLabel in = new JLabel("Candidate");
 		in.setFont(fn0);
 		in.setPreferredSize(new Dimension(300, 50));
 		in.setForeground(new Color(47, 207, 189));
 		p.add(in);
+		
 
 		JLabel q = new JLabel(ballot.getProjectdescription().getNameProject());
 		q.setBackground(Color.WHITE);
@@ -60,7 +68,38 @@ public class GUIvote {
 		q.setOpaque(true);
 		p.add(q);
 		f.add(p);
-
+		
+		JLabel graphics = new JLabel("Graphics");
+		graphics.setBackground(Color.WHITE);
+		graphics.setPreferredSize(new Dimension(150, 10));
+		graphics.setOpaque(true);
+		p.add(graphics);
+		
+		
+		JLabel useful = new JLabel("Usefulness");
+		useful.setBackground(Color.WHITE);
+		useful.setPreferredSize(new Dimension(150, 10));
+		useful.setOpaque(true);
+		p.add(useful);
+		
+		JLabel goodidea = new JLabel("Good Idea");
+		goodidea.setBackground(Color.WHITE);
+		goodidea.setPreferredSize(new Dimension(150, 10));
+		goodidea.setOpaque(true);
+		p.add(goodidea);
+		
+		JCheckBox graphicsone = new JCheckBox("1");
+		useful.setBackground(Color.WHITE);
+		useful.setPreferredSize(new Dimension(150, 10));
+		useful.setOpaque(true);
+		p.add(graphicsone);
+		
+		JCheckBox graphicstwo = new JCheckBox("2");
+		useful.setBackground(Color.WHITE);
+		useful.setPreferredSize(new Dimension(150, 10));
+		useful.setOpaque(true);
+		p.add(graphicstwo);
+		
 		JButton l2 = new JButton("Submit");
 		l2.setBackground(Color.WHITE);
 		l2.setFont(fn1);
@@ -72,14 +111,14 @@ public class GUIvote {
 		f.add(p);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f.setSize(800, 600);
-		f.setVisible(true);
+		f.setVisible(check);
 		f.setLayout(null);
 		f.setResizable(false);
 
 		l2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				ballot.vote();
-				f.setVisible(false);
+				f.setVisible(true);
 			}
 		});
 
@@ -89,4 +128,3 @@ public class GUIvote {
 		this.check = check;
 	}
 
-}
