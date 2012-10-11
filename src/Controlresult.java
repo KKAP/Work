@@ -5,13 +5,18 @@ public class Controlresult {
 	private Ballotbox ballotbox;
 	private int i=0;
 	private Guiresult guiresult;
-	
+	/**
+	 * This is a constructor for a Controlresult class.
+	 * @param ballotbox
+	 */
 	Controlresult(Ballotbox ballotbox) {
 		this.ballotbox = ballotbox;
 		guiresult = new Guiresult();
 
 	}
-
+	/**
+	 * This method is for show a vote count.
+	 */
 	public void show() {
 		Set<String> set = ballotbox.getBallotBox().keySet();
 		Iterator iter = (Iterator) set.iterator();
