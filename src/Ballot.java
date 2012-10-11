@@ -5,31 +5,46 @@
  * 
  */
 
-
-/*Constructor*/
 public class Ballot {
 	private Voter voter;
 	private Projectdescription projectdescription;
 	private Categories categories;
-	private Ballotbox ballotBox;
-/*Constructor*/
-	public Ballot(Voter voter, Projectdescription project, Categories categories,Ballotbox ballotbox) {
+	private BallotBox ballotBox;
+	/**
+	 * 
+	 * @param voter which voter.
+	 * @param project project description.
+	 * @param categories what kind of categories.
+	 * @param ballotbox ballotbox.
+	 * this is a constructor class.
+	 */
+	public Ballot(Voter voter, Projectdescription project, Categories categories,BallotBox ballotbox) {
 		this.voter=voter;
 		projectdescription = project;
 		this.categories = categories;
 		this.ballotBox=ballotbox;
 	}
-/*vote a score to Ballotbox*/
+	/**
+	 * this method use to vote.
+	 */
 	public void vote() {
 		ballotBox.addBallot(projectdescription.getNameProject());
 	}
 
 
-/*return categories*/	
+/**
+ * 
+ * @return a categories
+ */
+
+
 	public Categories getCategories(){
 		return categories;
 	}
-/*return projectdescription*/
+/**
+ * 
+ * @return  projectdescription mean return a project description.
+ */
 	public Projectdescription getProjectdescription() {
 		return projectdescription;
 	}
