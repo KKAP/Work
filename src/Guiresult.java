@@ -34,7 +34,7 @@ public class Guiresult {
 		panel_score.add(label_headscore);
 		for (int c = 0; c < i; c++) {
 
-			JLabel label_num = new JLabel(i+"");
+			JLabel label_num = new JLabel(c+1+"");
 			JLabel label_name = new JLabel(name);
 			JLabel label_score = new JLabel(score+"");
 			panel_num.add(label_num);
