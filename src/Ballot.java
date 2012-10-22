@@ -9,7 +9,7 @@ public class Ballot {
 	private Voter voter;
 	private Project projectdescription;
 	private Categories categories;
-	private BallotBox ballotBox;
+	private Ballotbox ballotBox;
 
 	/**
 	 * 
@@ -19,7 +19,7 @@ public class Ballot {
 	 * @param ballotbox ballotbox.
 	 * this is a constructor class.
 	 */
-	public Ballot(Voter voter, Project project, Categories categories,BallotBox ballotbox ){
+	public Ballot(Voter voter, Project project, Categories categories,Ballotbox ballotbox ){
 		this.voter=voter;
 		projectdescription = project;
 		this.categories = categories;

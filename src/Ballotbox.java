@@ -7,11 +7,11 @@ import java.util.Map;
  * This class keeps all the ballot of the votes
  */
 
-public class BallotBox {
+public class Ballotbox {
 	private List<Ballot> ballot ;
 	private Map<String, Integer> map = new HashMap<String, Integer>();
 	
-	public BallotBox(){
+	public Ballotbox(){
 		ballot = new ArrayList<Ballot>(); 
 	}
 /**

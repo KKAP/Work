@@ -2,7 +2,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class Controlresult {
-	private BallotBox ballotbox;
+	private Ballotbox ballotbox;
 	private int i=0;
 	private Guiresult guiresult;
 
@@ -10,7 +10,7 @@ public class Controlresult {
 	 * This is a constructor for a Controlresult class.
 	 * @param ballotbox
 	 */
-	Controlresult(BallotBox ballotbox) {
+	Controlresult(Ballotbox ballotbox) {
 		this.ballotbox = ballotbox;
 		guiresult = new Guiresult();
 

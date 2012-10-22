@@ -13,7 +13,7 @@ public class main {
 		Commitee commitee;
 		Professor professor;
 		Ballot ballot;
-		BallotBox ballotbox = new BallotBox();
+		Ballotbox ballotbox = new Ballotbox();
 		Categories categories = new Categories("dddd");
 		Project a1 = new Project("1", "1");
 		Project a2 = new Project("2", "2");
