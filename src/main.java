@@ -7,6 +7,7 @@ public class main {
 	public static void main(String[] args) {
 
 		int count = 0;
+		
 		GUIvote guiVote = new GUIvote();
 		Observer observer;
 		Student student;
@@ -22,18 +23,19 @@ public class main {
 		Project a5 = new Project("5", "5");
 		Project a6 = new Project("6", "6");
 		Controlresult controlResult = new  Controlresult(ballotbox);
-		while (true) {
+		//while (true) {
 			GUIlogin login =new GUIlogin();
-			
+			while(login.toString() != null)
+			{
 			System.out.println(login.toString());
-			if (count == 5)
-				break;
+			//if (count == 5)
+				//break;
 			guiVote.setShow(true);
 			guiVote = new GUIvote();
 			//guiVote.setShow(true);
 			//String in = sc.nextLine();
 			{
-				if (Character.toString(login.toString().charAt(0)).equals("1")) {
+				if (login.toString().equals("1")) {
 					observer = new Observer();
 				//	while(observer.getRemainning()>=0)
 					
@@ -41,14 +43,14 @@ public class main {
 					guiVote.guiVote(ballot);
 					
 					
-				} else if (Character.toString(login.toString().charAt(0)).equals("2")) {
+				} else if (login.toString().charAt(0) == '2') {
 					student = new Student("peach");
 					//while(student.getRemainning()>=0)
 					{
 					ballot = new Ballot(student, a2, categories,ballotbox);
 					guiVote.guiVote(ballot);
 					}
-				} else if (Character.toString(login.toString().charAt(0)).equals("5")) {
+				} else if (login.toString().charAt(0) == '5') {
 					commitee = new Commitee();
 					professor = new Professor();
 					//while(commitee.getRemainning()>=0)
@@ -58,15 +60,15 @@ public class main {
 					}
 				}
 
-
 			}
+			//}
 			guiVote.setShow(false);
 			
 			
-			count++;
+		//	count++;
 
 		}
-		controlResult.show();
+	
 
 	}
 

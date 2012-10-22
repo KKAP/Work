@@ -2,12 +2,12 @@
 import javax.swing.*;
 import javax.swing.event.*;
 
-import com.sun.corba.se.spi.servicecontext.UEInfoServiceContext;
+
 
 import java.awt.*;
 import java.awt.event.*;
 public class GUIlogin {
-	private String name;
+	
 	private boolean check;
 	private JFrame frame = new JFrame("Login"); //create frame
 
@@ -19,7 +19,7 @@ public class GUIlogin {
 	private JTextArea head = new JTextArea("Login") ;
 	private JPanel pnlCenter = new JPanel();
 	private JPanel pnlSouth = new JPanel();
-
+	private String name ;
 
 	/**
 	 * A constucter for a GUI stuffs.
@@ -42,8 +42,9 @@ public class GUIlogin {
 		
 		loginBtn.addActionListener(new ActionListener() {	
 			public void actionPerformed(ActionEvent arg0) {
-				name=usernameText.getText();
+				name = usernameText.getText();
 				frame.setVisible(false);
+				
 				return;
 			}
 		});
