@@ -8,8 +8,12 @@ import java.util.Map;
  */
 
 public class BallotBox {
-
+	private List<Ballot> ballot ;
 	private Map<String, Integer> map = new HashMap<String, Integer>();
+	
+	public BallotBox(){
+		ballot = new ArrayList<Ballot>(); 
+	}
 /**
  * 
  * @param nameProject get is to use to check a Score in Map.
@@ -18,6 +22,8 @@ public class BallotBox {
 	public int getScore(String nameProject) {
 		return map.get(nameProject);
 	}
+	
+	
 /**
  * 
  * @param a get this to use to be a key to add a ballot.
@@ -29,6 +35,11 @@ public class BallotBox {
 			map.put(a, map.get(a) + 1);
 		} else
 			map.put(a, 1);
+	}
+	
+	
+	public void add(Ballot ballot){
+		this.ballot.add(ballot);
 	}
 /**
  *  

@@ -25,12 +25,12 @@ public class Ballot {
 		this.categories = categories;
 		this.ballotBox=ballotbox;
 	}
-	/**
-	 * this method use to vote.
-	 */
-	public void vote() {
-		ballotBox.addBallot(projectdescription.getName());
-	}
+//	/**
+//	 * this method use to vote.
+//	 */
+//	public void vote() {
+//		ballotBox.addBallot(projectdescription.getName());
+//	}
 
 
 	public Categories getCategories(){
