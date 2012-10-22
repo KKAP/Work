@@ -7,7 +7,6 @@ public class ControlVote {
 		this.ballot = ballot;
 		this.ballotbox = ballotbox;
 		ballotbox.add(ballot);
-
 	}
 
 }

@@ -119,8 +119,7 @@ public class GUIvote {
 
 		l2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				ballot.vote();
-				f.setVisible(true);
+				
 			}
 		});
 

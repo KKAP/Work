@@ -23,6 +23,7 @@ public class main {
 		Project a6 = new Project("6", "6");
 		Controlresult controlResult = new  Controlresult(ballotbox);
 		while (true) {
+			GUIlogin login =new GUIlogin();
 			if (count == 5)
 				break;
 			guiVote = new GUIvote();
