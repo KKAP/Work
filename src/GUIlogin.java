@@ -1,10 +1,13 @@
 
 import javax.swing.*;
 import javax.swing.event.*;
+
+import com.sun.corba.se.spi.servicecontext.UEInfoServiceContext;
+
 import java.awt.*;
 import java.awt.event.*;
 public class GUIlogin {
-
+	private String name;
 	private boolean check;
 	private JFrame frame = new JFrame("Login"); //create frame
 
@@ -34,10 +37,14 @@ public class GUIlogin {
 		frame.setSize(500, 400);
 		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
 		frame.setVisible(true); 
-		loginBtn.addActionListener(new ActionListener() {
-			
+		
+	
+		
+		loginBtn.addActionListener(new ActionListener() {	
 			public void actionPerformed(ActionEvent arg0) {
-				
+				name=usernameText.getText();
+				frame.setVisible(false);
+				return;
 			}
 		});
 
@@ -50,5 +57,8 @@ public class GUIlogin {
 	
 	public void setShow(boolean check) {
 		this.check = check;
+	}
+	public String toString(){
+		return name;
 	}
 }

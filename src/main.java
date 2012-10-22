@@ -24,28 +24,31 @@ public class main {
 		Controlresult controlResult = new  Controlresult(ballotbox);
 		while (true) {
 			GUIlogin login =new GUIlogin();
+			
+			System.out.println(login.toString());
 			if (count == 5)
 				break;
-			guiVote = new GUIvote();
 			guiVote.setShow(true);
-			String in = sc.nextLine();
+			guiVote = new GUIvote();
+			//guiVote.setShow(true);
+			//String in = sc.nextLine();
 			{
-				if (Character.toString(in.charAt(0)).equals("1")) {
+				if (Character.toString(login.toString().charAt(0)).equals("1")) {
 					observer = new Observer();
 				//	while(observer.getRemainning()>=0)
-					{
+					
 					ballot = new Ballot(observer, a1, categories,ballotbox);
 					guiVote.guiVote(ballot);
-					}
 					
-				} else if (Character.toString(in.charAt(0)).equals("2")) {
+					
+				} else if (Character.toString(login.toString().charAt(0)).equals("2")) {
 					student = new Student("peach");
 					//while(student.getRemainning()>=0)
 					{
 					ballot = new Ballot(student, a2, categories,ballotbox);
 					guiVote.guiVote(ballot);
 					}
-				} else if (Character.toString(in.charAt(0)).equals("5")) {
+				} else if (Character.toString(login.toString().charAt(0)).equals("5")) {
 					commitee = new Commitee();
 					professor = new Professor();
 					//while(commitee.getRemainning()>=0)
