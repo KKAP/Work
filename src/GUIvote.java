@@ -14,10 +14,6 @@ public class GUIvote {
 	public JFrame f;
 	private boolean check;
 
-	
-	
-	
-	
 	public void guiVote(final Ballot ballot) {
 
 		Font fn0 = new Font("Courier New", Font.BOLD, 20);
