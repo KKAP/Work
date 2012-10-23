@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import GUI.*;
 import user.*;
 import model.*;
@@ -9,19 +9,11 @@ import GUI.*;
 import user.*;
 import model.*;
 import controler.*;
-
-
 import java.util.Scanner;
 
 public class main {
 	static Scanner sc = new Scanner(System.in);
 
-
-	public static String a() {
-		GUIlogin login = new GUIlogin();
-		
-
-    
 	public static String a() {
 		GUIlogin login = new GUIlogin();
 
@@ -51,14 +43,9 @@ public class main {
 		while (count < 3) {
 			a();
 			count++;
-
-
+			sc.next();
 			{
 
-
-            
-			{
-                
 
 				guiVote = new GUIvote();
 				guiVote.setShow(true);
@@ -80,21 +67,10 @@ public class main {
 						guiVote.guiVote(ballot, controlVote);
 					}
 				}
-                
 			}
-
-
 		}
 		controlResult.show();
-
-
-            
-			sc.next();
-            
-			controlResult.show();
-		}
-        
-
 	}
-    
 }
+
+
