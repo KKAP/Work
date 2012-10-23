@@ -49,5 +49,8 @@ public class Ballotbox {
 	public Map getBallotBox() {
 		return map;
 	}
+	public List<Ballot> getBallot(){
+		return ballot;
+	}
 
 }

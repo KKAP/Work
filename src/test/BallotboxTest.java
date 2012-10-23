@@ -23,7 +23,13 @@ public class BallotboxTest {
 		z.addBallot("ppp");
 		z.addBallot("ppp");
 		z.addBallot("ppp");
+		z.addBallot("aa");
+		z.addBallot("bb");
+		z.addBallot("bb");
+		z.addBallot("bb");
 		assertEquals(4, z.getScore("ppp"));
+		assertEquals(1, z.getScore("aa"));
+		assertEquals(3, z.getScore("bb"));
 	}
 
 	@Test
@@ -32,7 +38,12 @@ public class BallotboxTest {
 		z.add(zzz);
 		z.add(zzzz);
 		z.add(zzzzz);
-		assertEquals(4,4 );
+		assertEquals(4,z.getBallot().size() );
+		z.add(zz);
+		z.add(zzz);
+		z.add(zzzz);
+		z.add(zzzzz);
+		assertEquals(8,z.getBallot().size() );
 	}
 
 	
