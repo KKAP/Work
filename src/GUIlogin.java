@@ -44,8 +44,6 @@ public class GUIlogin {
 			public void actionPerformed(ActionEvent arg0) {
 				name = usernameText.getText();
 				frame.setVisible(false);
-				
-				return;
 			}
 		});
 

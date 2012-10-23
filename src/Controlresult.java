@@ -1,6 +1,7 @@
+//package controler;
 import java.util.Iterator;
 import java.util.Set;
-
+ 
 public class Controlresult {
 	private Ballotbox ballotbox;
 	private int i=0;

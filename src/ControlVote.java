@@ -3,10 +3,15 @@ public class ControlVote {
 	private Ballotbox ballotbox;
 	private Ballot ballot;
 
-	public ControlVote(Ballotbox ballotbox, Ballot ballot) {
-		this.ballot = ballot;
+	public ControlVote(Ballotbox ballotbox) {
+		
 		this.ballotbox = ballotbox;
-		ballotbox.add(ballot);
 	}
+	public void add(Ballot ballot){
+		ballotbox.add(ballot);
+		ballotbox.addBallot(ballot.getProjectdescription().toString());
+		
+	}
+	
 
 }

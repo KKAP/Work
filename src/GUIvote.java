@@ -14,7 +14,7 @@ public class GUIvote {
 	public JFrame f;
 	private boolean check;
 
-	public void guiVote(final Ballot ballot,final Ballotbox ballotBox) {
+	public void guiVote(final Ballot ballot,final ControlVote controlVote) {
 
 		Font fn0 = new Font("Courier New", Font.BOLD, 20);
 		Font fn2 = new Font("Courier New", Font.BOLD, 14);
@@ -119,7 +119,8 @@ public class GUIvote {
 
 		l2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				ControlVote control = new ControlVote(ballotBox, ballot);
+				controlVote.add(ballot);
+				f.setVisible(false);
 			}
 		});
 
