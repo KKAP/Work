@@ -6,7 +6,6 @@ public class ControlVote {
 	private Ballot ballot;
 
 	public ControlVote(Ballotbox ballotbox) {
-		
 		this.ballotbox = ballotbox;
 	}
 	public void add(Ballot ballot){

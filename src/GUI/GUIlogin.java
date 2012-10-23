@@ -19,6 +19,8 @@ public class GUIlogin {
 	private JTextArea head = new JTextArea("Login") ;
 	private JPanel pnlCenter = new JPanel();
 	private JPanel pnlSouth = new JPanel();
+	private JLabel userLabel = new JLabel("User");
+	private JLabel passLabel = new JLabel("Password");
 	private String name ;
 
 	/**
@@ -27,7 +29,9 @@ public class GUIlogin {
 	public GUIlogin(){
 
 		//pnlCenter.add(head);
+		pnlCenter.add(userLabel);
 		pnlCenter.add(usernameText);
+		pnlCenter.add(passLabel);
 		pnlCenter.add(passwordText);
 		pnlCenter.add(loginBtn);
 		pnlCenter.add(showBtn);
