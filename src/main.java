@@ -13,14 +13,15 @@ import java.util.Scanner;
 
 public class main {
 	static Scanner sc = new Scanner(System.in);
-    
+
 	public static String a() {
 		GUIlogin login = new GUIlogin();
+		
 		if (login.toString() != null)
 			return login.toString();
 		return "2222";
 	}
-    
+
 	public static void main(String[] args) {
 		int count = 0;
 		GUIvote guiVote = new GUIvote();
@@ -42,9 +43,9 @@ public class main {
 		while (count < 3) {
 			a();
 			count++;
-            
+
 			{
-                
+
 				guiVote = new GUIvote();
 				guiVote.setShow(true);
 				String in = "1111";
@@ -56,7 +57,7 @@ public class main {
 					} else if (Character.toString(in.charAt(0)).equals("2")) {
 						student = new Student("peach");
 						ballot = new Ballot(student, a2, categories);
-                        
+
 						guiVote.guiVote(ballot, controlVote);
 					} else if (Character.toString(in.charAt(0)).equals("5")) {
 						commitee = new Commitee();
@@ -65,12 +66,12 @@ public class main {
 						guiVote.guiVote(ballot, controlVote);
 					}
 				}
-                
+
 			}
-            
+
 		}
 		controlResult.show();
 
 	}
-    
+
 }

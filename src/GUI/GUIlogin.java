@@ -2,12 +2,14 @@ package GUI;
 import javax.swing.*;
 import javax.swing.event.*;
 
+import com.sun.codemodel.internal.JGenerifiable;
+
 
 
 import java.awt.*;
 import java.awt.event.*;
 public class GUIlogin {
-	
+
 	private boolean check;
 	private JFrame frame = new JFrame("Login"); //create frame
 
@@ -21,29 +23,37 @@ public class GUIlogin {
 	private JPanel pnlSouth = new JPanel();
 	private JLabel userLabel = new JLabel("User");
 	private JLabel passLabel = new JLabel("Password");
+	//private 
 	private String name ;
 
 	/**
 	 * A constucter for a GUI stuffs.
 	 */
 	public GUIlogin(){
-
+		frame.setLayout(new GridLayout(0, 2));
 		//pnlCenter.add(head);
-		pnlCenter.add(userLabel);
-		pnlCenter.add(usernameText);
-		pnlCenter.add(passLabel);
-		pnlCenter.add(passwordText);
-		pnlCenter.add(loginBtn);
-		pnlCenter.add(showBtn);
-		frame.getContentPane().setLayout(new BorderLayout());
-		frame.getContentPane().add(pnlCenter , BorderLayout.CENTER);
-		frame.getContentPane().add(pnlCenter, BorderLayout.CENTER);
-		frame.setSize(500, 400);
+		frame.add(userLabel);
+		frame.add(usernameText);
+		frame.add(passLabel);
+		frame.add(passwordText);
+		frame.add(loginBtn);
+		frame.add(showBtn);
+//		pnlCenter.add(userLabel);
+//		pnlCenter.add(usernameText);
+//		pnlCenter.add(passLabel);
+//		pnlCenter.add(passwordText);
+//		pnlCenter.add(loginBtn);
+//		pnlCenter.add(showBtn);
+//		frame.getContentPane().setLayout(new BorderLayout());
+//		frame.getContentPane().add(pnlCenter , BorderLayout.CENTER);
+//		frame.getContentPane().add(pnlCenter, BorderLayout.CENTER);
+		frame.setSize(400, 150);
 		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
 		frame.setVisible(true); 
 		
-	
-		
+
+
+
 		loginBtn.addActionListener(new ActionListener() {	
 			public void actionPerformed(ActionEvent arg0) {
 				name = usernameText.getText();
@@ -51,13 +61,13 @@ public class GUIlogin {
 			}
 		});
 
-		 
+
 
 	}
 	public void show(){
 		frame.setVisible(check); 
 	}
-	
+
 	public void setShow(boolean check) {
 		this.check = check;
 	}
