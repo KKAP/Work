@@ -1,4 +1,7 @@
-
+import GUI.*;
+import user.*;
+import model.*;
+import controler.*;
 import java.util.Scanner;
 
 public class main {
