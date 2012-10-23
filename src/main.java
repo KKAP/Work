@@ -61,8 +61,12 @@ public class main {
 				}
 
 			}
+<<<<<<< HEAD
 			//}
 			guiVote.setShow(false);
+=======
+		//	guiVote.setShow(false);
+>>>>>>> ...
 			
 			
 		//	count++;
