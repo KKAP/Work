@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import GUI.*;
 import user.*;
 import model.*;
@@ -9,19 +10,31 @@ import user.*;
 import model.*;
 import controler.*;
 
+=======
+>>>>>>> change main
 import java.util.Scanner;
 
 public class main {
 	static Scanner sc = new Scanner(System.in);
+<<<<<<< HEAD
 
 	public static String a() {
 		GUIlogin login = new GUIlogin();
 		
+=======
+    
+	public static String a() {
+		GUIlogin login = new GUIlogin();
+>>>>>>> change main
 		if (login.toString() != null)
 			return login.toString();
 		return "2222";
 	}
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> change main
 	public static void main(String[] args) {
 		int count = 0;
 		GUIvote guiVote = new GUIvote();
@@ -43,9 +56,15 @@ public class main {
 		while (count < 3) {
 			a();
 			count++;
+<<<<<<< HEAD
 
 			{
 
+=======
+            
+			{
+                
+>>>>>>> change main
 				guiVote = new GUIvote();
 				guiVote.setShow(true);
 				String in = "1111";
@@ -57,7 +76,11 @@ public class main {
 					} else if (Character.toString(in.charAt(0)).equals("2")) {
 						student = new Student("peach");
 						ballot = new Ballot(student, a2, categories);
+<<<<<<< HEAD
 
+=======
+                        
+>>>>>>> change main
 						guiVote.guiVote(ballot, controlVote);
 					} else if (Character.toString(in.charAt(0)).equals("5")) {
 						commitee = new Commitee();
@@ -66,12 +89,21 @@ public class main {
 						guiVote.guiVote(ballot, controlVote);
 					}
 				}
-
+                
 			}
+<<<<<<< HEAD
 
 		}
 		controlResult.show();
 
+=======
+            
+			sc.next();
+            
+			controlResult.show();
+		}
+        
+>>>>>>> change main
 	}
-
+    
 }
