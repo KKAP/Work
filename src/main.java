@@ -39,17 +39,17 @@ public class main {
 			{
 				if (Character.toString(in.charAt(0)).equals("1")) {
 					observer = new Observer();
-					ballot = new Ballot(observer, a1, categories,ballotbox);
+					ballot = new Ballot(observer, a1, categories);
 					guiVote.guiVote(ballot, controlVote);
 				} else if (Character.toString(in.charAt(0)).equals("2")) {
 					student = new Student("peach");
-					ballot = new Ballot(student, a2, categories,ballotbox);
+					ballot = new Ballot(student, a2, categories);
 
 					guiVote.guiVote(ballot, controlVote);
 				} else if (Character.toString(in.charAt(0)).equals("5")) {
 					commitee = new Commitee();
 					professor = new Professor();
-					ballot = new Ballot(commitee, a4, categories,ballotbox);
+					ballot = new Ballot(commitee, a4, categories);
 					guiVote.guiVote(ballot, controlVote);
 				}
 
