@@ -50,6 +50,7 @@ public class GUIlogin {
 		frame.setSize(400, 150);
 		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
 		frame.setVisible(true); 
+		frame.setResizable(false);
 		
 
 
