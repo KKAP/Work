@@ -2,6 +2,11 @@ package GUI;
 import javax.swing.*;
 import javax.swing.event.*;
 
+import model.Ballot;
+import model.Ballotbox;
+import model.Categories;
+import model.Project;
+
 import com.sun.codemodel.internal.JGenerifiable;
 
 import controler.ControlLogin;
@@ -52,6 +57,16 @@ public class GUIlogin {
 				name = usernameText.getText();
 				frame.setVisible(false);
 				ControlLogin controlLogin = new ControlLogin();
+				controlLogin.identfy(name);
+				
+				Project a1 = new Project("1", "1");
+				Categories categories = new Categories("dddd");
+				
+				
+				Ballot ballot = new Ballot(controlLogin.identfy(name), a1, categories);
+				GUIvote guiVote = new GUIvote(); 
+				guiVote.guiVote(ballot, new ControlVote(new Ballotbox()));
+				guiVote.setShow(true);
 				
 			}
 		});
