@@ -3,7 +3,6 @@ import model.*;
 public class ControlVote {
 
 	private Ballotbox ballotbox;
-	private Ballot ballot;
 
 	public ControlVote(Ballotbox ballotbox) {
 		this.ballotbox = ballotbox;

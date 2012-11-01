@@ -4,15 +4,16 @@ import javax.swing.event.*;
 
 import com.sun.codemodel.internal.JGenerifiable;
 
+import controler.ControlLogin;
+import controler.ControlVote;
+
 
 
 import java.awt.*;
 import java.awt.event.*;
 public class GUIlogin {
-
 	private boolean check;
 	private JFrame frame = new JFrame("Login"); //create frame
-
 	private JButton loginBtn = new JButton("Login"); //create Login Button
 	private JButton showBtn = new JButton("Show Result"); //show result btn
 	private JTextField usernameText = new JTextField(20); //Textfield for username
@@ -38,15 +39,6 @@ public class GUIlogin {
 		frame.add(passwordText);
 		frame.add(loginBtn);
 		frame.add(showBtn);
-//		pnlCenter.add(userLabel);
-//		pnlCenter.add(usernameText);
-//		pnlCenter.add(passLabel);
-//		pnlCenter.add(passwordText);
-//		pnlCenter.add(loginBtn);
-//		pnlCenter.add(showBtn);
-//		frame.getContentPane().setLayout(new BorderLayout());
-//		frame.getContentPane().add(pnlCenter , BorderLayout.CENTER);
-//		frame.getContentPane().add(pnlCenter, BorderLayout.CENTER);
 		frame.setSize(400, 150);
 		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
 		frame.setVisible(true); 
@@ -59,6 +51,8 @@ public class GUIlogin {
 			public void actionPerformed(ActionEvent arg0) {
 				name = usernameText.getText();
 				frame.setVisible(false);
+				ControlLogin controlLogin = new ControlLogin();
+				
 			}
 		});
 
