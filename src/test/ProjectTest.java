@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class ProjectTest {
 
-	Project project = new Project("peach", "test"); 
+	ProjectDescription project = new ProjectDescription("peach", "test"); 
 	@Test
 	public void testProject() {
 		assertEquals("peach", project.toString());

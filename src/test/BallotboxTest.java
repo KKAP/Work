@@ -8,7 +8,7 @@ import org.junit.Test;
 
 public class BallotboxTest {
 	private Voter a = new Student("peach");
-	private Project b = new Project("TV", "very big");
+	private ProjectDescription b = new ProjectDescription("TV", "very big");
 	private Categories c= new Categories("beautiful");
 	Ballotbox z = new Ballotbox();
 	Ballot zz = new Ballot(a, b, c);

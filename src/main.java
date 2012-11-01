@@ -31,12 +31,12 @@ public class main {
 		Ballot ballot;
 		Ballotbox ballotbox = new Ballotbox();
 		Categories categories = new Categories("dddd");
-		Project a1 = new Project("1", "1");
-		Project a2 = new Project("2", "2");
-		Project a3 = new Project("3", "3");
-		Project a4 = new Project("4", "4");
-		Project a5 = new Project("5", "5");
-		Project a6 = new Project("6", "6");
+		ProjectDescription a1 = new ProjectDescription("1", "1");
+		ProjectDescription a2 = new ProjectDescription("2", "2");
+		ProjectDescription a3 = new ProjectDescription("3", "3");
+		ProjectDescription a4 = new ProjectDescription("4", "4");
+		ProjectDescription a5 = new ProjectDescription("5", "5");
+		ProjectDescription a6 = new ProjectDescription("6", "6");
 		Controlresult controlResult = new Controlresult(ballotbox);
 		ControlVote controlVote = new ControlVote(ballotbox);
 		

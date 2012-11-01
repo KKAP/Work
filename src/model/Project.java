@@ -1,37 +1,19 @@
 package model;
-/*
- * This class will create a projectdescition object and each one of them will store the project.
- */
+
+import java.util.ArrayList;
+
+import model.ProjectDescription;
 
 public class Project {
-
-	private String name;
-	private String description;
-
-	public Project(String name, String description) {
-		this.name = name;
-		this.description = description;
+	private ArrayList<ProjectDescription> project =null ;
+	public void add(ProjectDescription project){
+		if(this.project==null){
+			this.project = new ArrayList<ProjectDescription>();
+			this.project.add(project);
+		}
+		else this.project.add(project);
 	}
-
-	public void setDescription(String description) {
-		this.description = description;
+	public ArrayList<ProjectDescription> getProject(){
+		return project;
 	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public String getDescription() {
-		return description;
-
-	}
-	
-	public String toString() {
-		return name;
-	}
-
 }

@@ -8,7 +8,7 @@ package model;
 import user.*;
 public class Ballot {
 	private Voter voter;
-	private Project projectdescription;
+	private ProjectDescription projectdescription;
 	private Categories categories;
 //	private Ballotbox ballotBox;
 
@@ -20,7 +20,7 @@ public class Ballot {
 	 * @param ballotbox ballotbox.
 	 * this is a constructor class.
 	 */
-	public Ballot(Voter voter, Project project, Categories categories ){
+	public Ballot(Voter voter, ProjectDescription project, Categories categories ){
 		this.voter=voter;
 		projectdescription = project;
 		this.categories = categories;
@@ -33,7 +33,7 @@ public class Ballot {
 		return categories;
 	}
 
-	public Project getProjectdescription() {
+	public ProjectDescription getProjectdescription() {
 		return projectdescription;
 	}
 	public Voter getVoter(){

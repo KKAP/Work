@@ -5,7 +5,7 @@ import javax.swing.event.*;
 import model.Ballot;
 import model.Ballotbox;
 import model.Categories;
-import model.Project;
+import model.ProjectDescription;
 
 import com.sun.codemodel.internal.JGenerifiable;
 
@@ -59,7 +59,7 @@ public class GUIlogin {
 				ControlLogin controlLogin = new ControlLogin();
 				controlLogin.identfy(name);
 				
-				Project a1 = new Project("1", "1");
+				ProjectDescription a1 = new ProjectDescription("1", "1");
 				Categories categories = new Categories("dddd");
 				
 				
