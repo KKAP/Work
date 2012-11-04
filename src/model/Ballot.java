@@ -37,6 +37,9 @@ public class Ballot {
 	public Voter getVoter(){
 		return voter;
 	}
+	public int score(){
+		return map.get(criterion.BESTGRAPHICS)+map.get(criterion.BESTIDEA)+map.get(criterion.MOSTUSEFUL);
+	}
 
 
 
