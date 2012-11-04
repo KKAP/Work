@@ -63,7 +63,7 @@ public class GUIlogin {
 				Categories categories = new Categories("dddd");
 				
 				
-				Ballot ballot = new Ballot(controlLogin.identfy(name), a1, categories);
+				Ballot ballot = new Ballot(controlLogin.identfy(name), a1);
 				GUIvote guiVote = new GUIvote(); 
 				guiVote.guiVote(ballot, new ControlVote(new Ballotbox()));
 				guiVote.setShow(true);
