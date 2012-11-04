@@ -39,27 +39,27 @@ public class main {
 		ProjectDescription a6 = new ProjectDescription("6", "6");
 		Controlresult controlResult = new Controlresult(ballotbox);
 		ControlVote controlVote = new ControlVote(ballotbox);
-		
+
 		a();
 		guiVote.setShow(true);
-//		String in = login.toString();
-//		{
-//			if (Character.toString(in.charAt(0)).equals("1")) {
-//				observer = new Observer(in);
-//				ballot = new Ballot(observer, a1, categories);
-//				guiVote.guiVote(ballot, controlVote);
-//			} else if (Character.toString(in.charAt(0)).equals("2")) {
-//				student = new Student("peach");
-//				ballot = new Ballot(student, a2, categories);
-//
-//				guiVote.guiVote(ballot, controlVote);
-//			} else if (Character.toString(in.charAt(0)).equals("5")) {
-//				commitee = new Commitee(in);
-//				ballot = new Ballot(commitee, a4, categories);
-//				guiVote.guiVote(ballot, controlVote);
-//			}
-//		}
-
+		//		String in = login.toString();
+		//		{
+		//			if (Character.toString(in.charAt(0)).equals("1")) {
+		//				observer = new Observer(in);
+		//				ballot = new Ballot(observer, a1, categories);
+		//				guiVote.guiVote(ballot, controlVote);
+		//			} else if (Character.toString(in.charAt(0)).equals("2")) {
+		//				student = new Student("peach");
+		//				ballot = new Ballot(student, a2, categories);
+		//
+		//				guiVote.guiVote(ballot, controlVote);
+		//			} else if (Character.toString(in.charAt(0)).equals("5")) {
+		//				commitee = new Commitee(in);
+		//				ballot = new Ballot(commitee, a4, categories);
+		//				guiVote.guiVote(ballot, controlVote);
+		//			}
+		//		}
+		
 
 		controlResult.show();
 	}
