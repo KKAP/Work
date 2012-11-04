@@ -23,14 +23,13 @@ public class main {
 	}
 
 	public static void main(String[] args) {
-		GUIvote guiVote = new GUIvote() ;
+		//GUIvote guiVote = new GUIvote() ;
 		Observer observer;
 		Student student;
 		Commitee commitee;
 		Professor professor;
 		Ballot ballot;
 		Ballotbox ballotbox = new Ballotbox();
-		Categories categories = new Categories("dddd");
 		ProjectDescription a1 = new ProjectDescription("1", "1");
 		ProjectDescription a2 = new ProjectDescription("2", "2");
 		ProjectDescription a3 = new ProjectDescription("3", "3");
@@ -41,7 +40,7 @@ public class main {
 		ControlVote controlVote = new ControlVote(ballotbox);
 
 		a();
-		guiVote.setShow(true);
+		
 		//		String in = login.toString();
 		//		{
 		//			if (Character.toString(in.charAt(0)).equals("1")) {
@@ -61,7 +60,7 @@ public class main {
 		//		}
 		
 
-		controlResult.show();
+		//controlResult.show();
 	}
 }
 
