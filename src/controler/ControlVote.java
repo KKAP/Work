@@ -9,7 +9,7 @@ public class ControlVote {
 	}
 	public void add(Ballot ballot){
 		ballotbox.add(ballot);
-		ballotbox.addBallot(ballot.getProjectdescription().toString());
+		ballotbox.addBallot(ballot.getProjectdescription().toString(), ballot.score());
 		
 	}
 	
