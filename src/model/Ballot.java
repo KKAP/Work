@@ -1,4 +1,7 @@
 package model;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * This class authenicate the user so that each kind of user would have
  * different votes And this class will calculate the votes that the user still
@@ -9,28 +12,23 @@ import user.*;
 public class Ballot {
 	private Voter voter;
 	private ProjectDescription projectdescription;
-	private Categories categories;
-//	private Ballotbox ballotBox;
-
+	private Criterion criterion;
+	private Map<Criterion, Integer> map = new HashMap<Criterion, Integer>();
 	/**
 	 * 
 	 * @param voter which voter.
 	 * @param project project description.
-	 * @param categories what kind of categories.
-	 * @param ballotbox ballotbox.
 	 * this is a constructor class.
 	 */
-	public Ballot(Voter voter, ProjectDescription project, Categories categories ){
+	public Ballot(Voter voter, ProjectDescription project ){
 		this.voter=voter;
 		projectdescription = project;
-		this.categories = categories;
-	//	this.ballotBox=ballotbox;
 	}
 
 
 
-	public Categories getCategories(){
-		return categories;
+	public Criterion getCriterion(){
+		return criterion;
 	}
 
 	public ProjectDescription getProjectdescription() {
@@ -39,5 +37,15 @@ public class Ballot {
 	public Voter getVoter(){
 		return voter;
 	}
+
+
+
+	public void add(int bestGraphic, int bestIdea, int usable) {
+		map.put(criterion.BESTGRAPHICS, bestGraphic);
+		map.put(criterion.BESTIDEA, bestIdea);
+		map.put(criterion.MOSTUSEFUL, usable);
+		
+	}
+	
 
 }
