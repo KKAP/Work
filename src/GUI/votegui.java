@@ -18,41 +18,74 @@ import javax.swing.JCheckBox;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 
+import model.Ballot;
+import model.Criterion;
+import controler.ControlVote;
+
 public class votegui extends JFrame {
 
 	private JPanel contentPane;
+	private JFrame frame;
 	private JTextField txtDescription;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					votegui frame = new votegui();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	private JCheckBox chckbxNewCheckBox;
+	private JCheckBox chckbxNewCheckBox_1;
+	private JCheckBox chckbxNewCheckBox_2;
+	private JCheckBox chckbxNewCheckBox_3;
+	private JCheckBox chckbxNewCheckBox_4;
+	private JCheckBox chckbxNewCheckBox_5;
+	private JCheckBox chckbxNewCheckBox_6;
+	private JCheckBox chckbxNewCheckBox_7;
+	private JCheckBox chckbxNewCheckBox_8;
+	Criterion criterion;
+	
+//	
+//
+//	/**
+//	 * Launch the application.
+//	 */
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					votegui frame = new votegui();
+//				//	frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
 	 */
-	public votegui() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+	public votegui(final Ballot ballot,final ControlVote controlVote) {
+		frame = new JFrame("Vote");
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
+		//setContentPane(contentPane);
 		
 		JButton btnNewButton = new JButton("Submit");
 		btnNewButton.setBounds(74, 228, 89, 23);
 		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+			public void actionPerformed(ActionEvent a) {
+				int bestIdea=0;
+				int usable=0;
+				int bestGraphic=0;
+				if(a.getSource()==chckbxNewCheckBox) bestIdea=2;
+				else if(a.getSource()==chckbxNewCheckBox_1) bestIdea =3;
+				else if(a.getSource()==chckbxNewCheckBox_2) bestIdea =1;
+				if(a.getSource()==chckbxNewCheckBox_3) usable=1;
+				else if(a.getSource()==chckbxNewCheckBox_4) usable =2;
+				else if(a.getSource()==chckbxNewCheckBox_5) usable =3;
+				if(a.getSource()==chckbxNewCheckBox_6) usable=3;
+				else if(a.getSource()==chckbxNewCheckBox_7) usable =1;
+				else if(a.getSource()==chckbxNewCheckBox_8) usable =2;
+				ballot.add(bestGraphic,bestIdea,usable);
+				controlVote.add(ballot);
+				frame.setVisible(false);
 			}
 		});
 		
@@ -60,33 +93,34 @@ public class votegui extends JFrame {
 		btnNewButton_1.setBounds(226, 228, 89, 23);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				frame.setVisible(false);
 			}
 		});
 		contentPane.setLayout(null);
 		contentPane.add(btnNewButton_1);
 		contentPane.add(btnNewButton);
 		
-		JCheckBox chckbxNewCheckBox = new JCheckBox("2");
+		chckbxNewCheckBox = new JCheckBox("2");
 		chckbxNewCheckBox.setBounds(74, 147, 97, 23);
 		contentPane.add(chckbxNewCheckBox);
 		
-		JCheckBox chckbxNewCheckBox_1 = new JCheckBox("3");
+		chckbxNewCheckBox_1 = new JCheckBox("3");
 		chckbxNewCheckBox_1.setBounds(74, 173, 97, 23);
 		contentPane.add(chckbxNewCheckBox_1);
 		
-		JCheckBox chckbxNewCheckBox_2 = new JCheckBox("1");
+		chckbxNewCheckBox_2 = new JCheckBox("1");
 		chckbxNewCheckBox_2.setBounds(74, 121, 97, 23);
 		contentPane.add(chckbxNewCheckBox_2);
 		
-		JCheckBox chckbxNewCheckBox_3 = new JCheckBox("1");
+		chckbxNewCheckBox_3 = new JCheckBox("1");
 		chckbxNewCheckBox_3.setBounds(173, 121, 97, 23);
 		contentPane.add(chckbxNewCheckBox_3);
 		
-		JCheckBox chckbxNewCheckBox_4 = new JCheckBox("2");
+		chckbxNewCheckBox_4 = new JCheckBox("2");
 		chckbxNewCheckBox_4.setBounds(173, 147, 97, 23);
 		contentPane.add(chckbxNewCheckBox_4);
 		
-		JCheckBox chckbxNewCheckBox_5 = new JCheckBox("3");
+		chckbxNewCheckBox_5 = new JCheckBox("3");
 		chckbxNewCheckBox_5.setBounds(173, 173, 97, 23);
 		contentPane.add(chckbxNewCheckBox_5);
 		
@@ -112,16 +146,24 @@ public class votegui extends JFrame {
 		lblNewLabel.setBounds(288, 101, 89, 14);
 		contentPane.add(lblNewLabel);
 		
-		JCheckBox chckbxNewCheckBox_6 = new JCheckBox("1");
+		chckbxNewCheckBox_6 = new JCheckBox("1");
 		chckbxNewCheckBox_6.setBounds(288, 121, 97, 23);
 		contentPane.add(chckbxNewCheckBox_6);
 		
-		JCheckBox chckbxNewCheckBox_7 = new JCheckBox("2");
+		chckbxNewCheckBox_7 = new JCheckBox("2");
 		chckbxNewCheckBox_7.setBounds(288, 147, 97, 23);
 		contentPane.add(chckbxNewCheckBox_7);
 		
-		JCheckBox checkBox = new JCheckBox("3");
-		checkBox.setBounds(288, 173, 97, 23);
-		contentPane.add(checkBox);
+		chckbxNewCheckBox_8 = new JCheckBox("3");
+		chckbxNewCheckBox_8.setBounds(288, 173, 97, 23);
+		contentPane.add(chckbxNewCheckBox_8);
+		
+		frame.add(contentPane);
+		frame.setVisible(true);
+		
+		
+		
+		
+		
 	}
 }
