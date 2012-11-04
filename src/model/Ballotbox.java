@@ -30,12 +30,12 @@ public class Ballotbox {
  * @param a get this to use to be a key to add a ballot.
  * this method is add Ballot method.
  */
-	public void addBallot(String a) {
+	public void addBallot(String a,int b) {
 
 		if (map.containsKey(a)) {
-			map.put(a, map.get(a) + 1);
+			map.put(a, map.get(a) + b);
 		} else
-			map.put(a, 1);
+			map.put(a, b);
 	}
 	
 	
