@@ -4,7 +4,6 @@ import javax.swing.event.*;
 
 import model.Ballot;
 import model.Ballotbox;
-import model.Categories;
 import model.ProjectDescription;
 
 import com.sun.codemodel.internal.JGenerifiable;
@@ -58,15 +57,11 @@ public class GUIlogin {
 				frame.setVisible(false);
 				ControlLogin controlLogin = new ControlLogin();
 				controlLogin.identfy(name);
-				
 				ProjectDescription a1 = new ProjectDescription("1", "1");
-				Categories categories = new Categories("dddd");
-				
-				
 				Ballot ballot = new Ballot(controlLogin.identfy(name), a1);
-				GUIvote guiVote = new GUIvote(); 
-				guiVote.guiVote(ballot, new ControlVote(new Ballotbox()));
-				guiVote.setShow(true);
+				GUIvote guiVote = new GUIvote(ballot, new ControlVote(new Ballotbox())); 
+				
+				
 				
 			}
 		});
