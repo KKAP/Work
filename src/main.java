@@ -14,13 +14,7 @@ import java.util.Scanner;
 public class main {
 	static Scanner sc = new Scanner(System.in);
 	static private GUIlogin login;
-	public static String a() {
-		login = new GUIlogin();
-
-		if (login.toString() != null)
-			return login.toString();
-		return "2222";
-	}
+	
 
 	public static void main(String[] args) {
 		//GUIvote guiVote = new GUIvote() ;
@@ -36,11 +30,17 @@ public class main {
 		ProjectDescription a4 = new ProjectDescription("4", "4");
 		ProjectDescription a5 = new ProjectDescription("5", "5");
 		ProjectDescription a6 = new ProjectDescription("6", "6");
+		Project project = new Project();
+		project.add(a1);
+		project.add(a2);
+		project.add(a3);
+		project.add(a4);
+		project.add(a5);
+		project.add(a6);
 		Controlresult controlResult = new Controlresult(ballotbox);
 		ControlVote controlVote = new ControlVote(ballotbox);
+		login = new GUIlogin(new ControlLogin(project));
 
-		a();
-		
 		//		String in = login.toString();
 		//		{
 		//			if (Character.toString(in.charAt(0)).equals("1")) {

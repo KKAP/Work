@@ -2,7 +2,7 @@ package controler;
 import model.*;
 public class ControlVote {
 
-	private Ballotbox ballotbox;
+	private static Ballotbox ballotbox;
 
 	public ControlVote(Ballotbox ballotbox) {
 		this.ballotbox = ballotbox;

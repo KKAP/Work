@@ -18,8 +18,13 @@ import javax.swing.JCheckBox;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 
+import user.Student;
+import user.Voter;
+
 import model.Ballot;
 import model.Criterion;
+import model.Project;
+import model.ProjectDescription;
 import controler.ControlVote;
 
 public class GUIvote extends JFrame {
@@ -27,6 +32,7 @@ public class GUIvote extends JFrame {
 	private JPanel contentPane;
 	private JFrame frame;
 	private JTextField txtDescription;
+	private JTextField txtName;
 	private JCheckBox chckbxNewCheckBox;
 	private JCheckBox chckbxNewCheckBox_1;
 	private JCheckBox chckbxNewCheckBox_2;
@@ -38,28 +44,12 @@ public class GUIvote extends JFrame {
 	private JCheckBox chckbxNewCheckBox_8;
 	Criterion criterion;
 	
-//	
-//
-//	/**
-//	 * Launch the application.
-//	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					votegui frame = new votegui();
-//				//	frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
+
 
 	/**
 	 * Create the frame.
 	 */
-	public GUIvote(final Ballot ballot,final ControlVote controlVote) {
+	public GUIvote(final Project project,final int i,final ControlVote controlVote) {
 		frame = new JFrame("Vote");
 		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setBounds(100, 100, 450, 300);
@@ -83,9 +73,9 @@ public class GUIvote extends JFrame {
 				if(a.getSource()==chckbxNewCheckBox_6) usable=3;
 				else if(a.getSource()==chckbxNewCheckBox_7) usable =1;
 				else if(a.getSource()==chckbxNewCheckBox_8) usable =2;
+				Ballot ballot=new Ballot(new Student("peach"), project.getProject().get(i)) ;
 				ballot.add(bestGraphic,bestIdea,usable);
 				controlVote.add(ballot);
-				
 				frame.setVisible(false);
 			}
 		});
@@ -130,11 +120,18 @@ public class GUIvote extends JFrame {
 		contentPane.add(lblVote);
 		
 		txtDescription = new JTextField();
-		txtDescription.setText("DESCRIPTION");
+		txtDescription.setText(project.getProject().get(i).getDescription());
 		txtDescription.setEnabled(false);
 		txtDescription.setBounds(240, 36, 165, 63);
 		contentPane.add(txtDescription);
 		txtDescription.setColumns(10);
+		
+		txtName = new JTextField();
+		txtName.setText(project.getProject().get(i).getName());
+		txtName.setEnabled(false);
+		txtName.setBounds(40, 36, 165, 63);
+		contentPane.add(txtName);
+		txtName.setColumns(10);
 		
 		JLabel lblBeautiful = new JLabel("Best Idea");
 		lblBeautiful.setBounds(74, 101, 46, 14);

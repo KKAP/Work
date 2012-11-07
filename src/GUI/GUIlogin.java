@@ -34,7 +34,7 @@ public class GUIlogin {
 	/**
 	 * A constucter for a GUI stuffs.
 	 */
-	public GUIlogin(){
+	public GUIlogin(final ControlLogin controlLogin){
 		frame.setLayout(new GridLayout(0, 2));
 		//pnlCenter.add(head);
 		frame.add(userLabel);
@@ -55,13 +55,8 @@ public class GUIlogin {
 			public void actionPerformed(ActionEvent arg0) {
 				name = usernameText.getText();
 				frame.setVisible(false);
-				ControlLogin controlLogin = new ControlLogin();
 				controlLogin.identfy(name);
-				ProjectDescription a1 = new ProjectDescription("1", "1");
-				Ballot ballot = new Ballot(controlLogin.identfy(name), a1);
-				GUIvote guiVote = new GUIvote(ballot, new ControlVote(new Ballotbox())); 
-				
-				
+				controlLogin.showProject();
 				
 			}
 		});
